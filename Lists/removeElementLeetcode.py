@@ -14,7 +14,10 @@ def removeElement(nums, val):
             arr[index2] = temp
         position_to_swap = -1
         count_of_val = 0
+        common_point = False
         for index, each_element in enumerate(nums):
+            if each_element == val:
+                count_of_val += 1
             l = index + abs(position_to_swap)
             if l == len(nums):
                 print(f"{index}, {position_to_swap} is a common point and breaking out of loop ....")
@@ -36,16 +39,28 @@ def removeElement(nums, val):
                 if not common_point:
                     print(f"\t Found index {position_to_swap} which has value {nums[position_to_swap]} , swapping . . .")
                     swap(index, position_to_swap, nums)
-                    count_of_val += 1
+                    position_to_swap = position_to_swap - 1
+                    l = index + abs(position_to_swap)
+                    if l == len(nums):
+                        print(f"\t{index}, {position_to_swap} is a common point and breaking out of loop ....")
+                        common_point = True
+                        break
+                    print(f"\tnums : {nums}")
+                    
                 else:
                     break
             else:
                 print("No, Going to Next Element . . .")
         val_of_k = len(nums) - count_of_val
+
+        #Remove Last elements until postion_to_swap
+        for index in range(count_of_val):
+            del nums[-1]
+        
         return val_of_k
 
-nums = [3,3]
-val = 3
+nums = [4,5]
+val = 5
 
 print(removeElement(nums, val))
 print(nums)
