@@ -1,11 +1,16 @@
 a = 10
 print(id(a))
+
+
 def something():
     a = 9
-    x = globals()['a']
+    x = globals()["a"]
     print(id(x))
-    print("in fun" ,a)
-    globals()['a'] = 15
+    print("in fun", a)
+    globals()["a"] = 15
+    a = 16
+
+
 something()
 
-print("outside", a) 
+print("outside", a)
