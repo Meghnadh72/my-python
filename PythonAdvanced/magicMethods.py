@@ -9,8 +9,12 @@ class MyClass:
     def get_full_name(self):
         return self.first_name + " " + self.last_name
 
+    def __str__(self):
+        return self.first_name + " " + self.last_name
+
 
 my_object = MyClass("Ram", "Meghnadh")
+print(my_object)
 special_function = my_object.__mydunder__
 print(special_function())
 sp_fucntion = my_object.get_full_name

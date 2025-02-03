@@ -1,4 +1,4 @@
-
+""" 
 3,27,2,-9,0,7
 
 a [-9, 2,3] 
@@ -25,4 +25,4 @@ Form Min three_min
 7 - 
     7 < -9 False 
     7 < 0 False
-    7 < 2 False
+    7 < 2 False """

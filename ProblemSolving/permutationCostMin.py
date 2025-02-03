@@ -7,7 +7,9 @@ numbers, n being size of array
 Note: You can either increase or decrease a element by ONE, and the 
 cost of that operation would be 1. 
 input = [3,4,1,-9,0,5,3]
-output should  all N natural 
+output should calculate min cost so 
+that array contains all N natural 
 numbers till 7, n being size of array. 
+
 
 """
